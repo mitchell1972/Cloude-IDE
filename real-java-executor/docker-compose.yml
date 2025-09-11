@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  java-executor:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - MAX_EXECUTION_TIME=30000
+      - MAX_MEMORY_MB=512
+      - MAX_CONCURRENT_EXECUTIONS=10
+      - JAVA_COMPILE_TIMEOUT=15000
+      - JAVA_EXECUTION_TIMEOUT=30000
+      - MAX_CODE_SIZE_KB=500
+      - CLEANUP_INTERVAL_MS=300000
+    volumes:
+      - java-temp:/tmp/java-executions
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+volumes:
+  java-temp:
+    driver: local

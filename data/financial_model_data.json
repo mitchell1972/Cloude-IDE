@@ -1,0 +1,123 @@
+{
+  "projections": {
+    "years": [
+      2025,
+      2026,
+      2027,
+      2028,
+      2029
+    ],
+    "user_growth": {
+      "Free Users": [
+        10000,
+        35000,
+        85000,
+        175000,
+        325000
+      ],
+      "Pro Users": [
+        500,
+        2500,
+        8500,
+        21000,
+        45000
+      ],
+      "Team Users": [
+        50,
+        400,
+        1800,
+        5200,
+        12500
+      ],
+      "Enterprise Users": [
+        5,
+        35,
+        150,
+        420,
+        1000
+      ]
+    },
+    "revenue_breakdown": {
+      "Subscription Revenue": [
+        0.8,
+        4.2,
+        13.5,
+        32.8,
+        68.2
+      ],
+      "Usage-Based Revenue": [
+        0.1,
+        0.7,
+        2.4,
+        6.1,
+        13.6
+      ],
+      "Enterprise Services": [
+        0.1,
+        0.4,
+        1.5,
+        3.9,
+        8.9
+      ],
+      "Total Revenue": [
+        1.0,
+        5.3,
+        17.4,
+        42.8,
+        90.7
+      ]
+    },
+    "market_penetration": [
+      0.06756756756756757,
+      0.3493737640079103,
+      1.1196911196911197,
+      2.686754551161331,
+      5.557598039215686
+    ]
+  },
+  "unit_economics": {
+    "tiers": [
+      "Pro",
+      "Team",
+      "Enterprise"
+    ],
+    "customer_acquisition_cost": [
+      85,
+      245,
+      1200
+    ],
+    "customer_lifetime_value": [
+      285,
+      936,
+      8940
+    ],
+    "ltv_cac_ratios": [
+      3.3529411764705883,
+      3.820408163265306,
+      7.45
+    ]
+  },
+  "competitive_analysis": {
+    "competitors": [
+      "GitHub\nCodespaces",
+      "CodeSandbox\nPro",
+      "Replit\nCore",
+      "StackBlitz\nPro",
+      "IDE Platform\nPro"
+    ],
+    "individual_pricing": [
+      18,
+      20,
+      20,
+      25,
+      19
+    ],
+    "team_pricing": [
+      39,
+      40,
+      35,
+      60,
+      39
+    ]
+  }
+}

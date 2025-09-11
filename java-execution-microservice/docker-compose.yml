@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  java-execution-service:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+    volumes:
+      # Mount Docker socket to allow container to create other containers
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # Mount source code for development (optional)
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "const http = require('http'); http.get('http://localhost:3001/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - java-execution-network
+
+  # Java execution environment (will be created dynamically by the service)
+  # This is just a reference - actual containers will be created on-demand
+  java-runner-template:
+    image: openjdk:17-alpine
+    command: ["echo", "This is a template container that won't be started"]
+    profiles: ["template"]
+    networks:
+      - java-execution-network
+
+networks:
+  java-execution-network:
+    driver: bridge
+
+volumes:
+  java-execution-data:
+    driver: local

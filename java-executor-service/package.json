@@ -1,0 +1,41 @@
+{
+  "name": "java-executor-service",
+  "version": "1.0.0",
+  "description": "Production-grade Java code execution microservice for SDET IDE",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "ws": "^8.14.2",
+    "uuid": "^9.0.1",
+    "joi": "^17.11.0",
+    "winston": "^3.11.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "java",
+    "compiler",
+    "executor",
+    "microservice",
+    "docker",
+    "sandbox"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT"
+}

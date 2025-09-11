@@ -1,0 +1,108 @@
+{
+  "test_date": "2025-09-11T05:54:08.387098",
+  "summary": {
+    "total": 16,
+    "passed": 13,
+    "failed": 3,
+    "errors": 0,
+    "success_rate": 81.25
+  },
+  "detailed_results": [
+    {
+      "timestamp": "2025-09-11T05:54:07.103963",
+      "test": "SDET Plans Retrieval",
+      "status": "PASS",
+      "details": "Found 3 SDET plans"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.103985",
+      "test": "SDET Plan free",
+      "status": "PASS",
+      "details": "$0.00, Limit: 100, Price ID: price_1S5tA7LniIk7TL9BjXuC0LTz"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.103994",
+      "test": "SDET Plan professional",
+      "status": "PASS",
+      "details": "$29.00, Limit: 999999, Price ID: price_1S5tA8LniIk7TL9BsHhzlbqx"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.104001",
+      "test": "SDET Plan enterprise",
+      "status": "PASS",
+      "details": "$99.00, Limit: 999999, Price ID: price_1S5tA8LniIk7TL9BQsn3ZJd0"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.250158",
+      "test": "IDE Plans Retrieval",
+      "status": "PASS",
+      "details": "Found 3 IDE plans"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.250183",
+      "test": "IDE Plan free",
+      "status": "PASS",
+      "details": "$0.00, Limit: 2, Price ID: price_1S5sgqLniIk7TL9Bo8gIAiHU"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.250191",
+      "test": "IDE Plan pro",
+      "status": "PASS",
+      "details": "$19.00, Limit: 50, Price ID: price_1S5sgsLniIk7TL9B3r6mlbb2"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.250197",
+      "test": "IDE Plan enterprise",
+      "status": "PASS",
+      "details": "$149.00, Limit: 999999, Price ID: price_1S5sgvLniIk7TL9B5701hXP3"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.386568",
+      "test": "Edge Function sdet-create-subscription",
+      "status": "PASS",
+      "details": "Function accessible"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.524229",
+      "test": "Edge Function sdet-stripe-webhook",
+      "status": "FAIL",
+      "details": "HTTP 400"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.706448",
+      "test": "Edge Function create-subscription",
+      "status": "PASS",
+      "details": "Function accessible"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.847984",
+      "test": "Edge Function stripe-webhook",
+      "status": "PASS",
+      "details": "Function accessible"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:07.984618",
+      "test": "SDET Auth Validation",
+      "status": "FAIL",
+      "details": "Unexpected status: 401"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:08.090232",
+      "test": "Invalid Plan Validation",
+      "status": "FAIL",
+      "details": "Status: 401"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:08.231848",
+      "test": "Webhook sdet-stripe-webhook",
+      "status": "PASS",
+      "details": "Webhook endpoint accessible"
+    },
+    {
+      "timestamp": "2025-09-11T05:54:08.383845",
+      "test": "Webhook stripe-webhook",
+      "status": "PASS",
+      "details": "Webhook endpoint accessible"
+    }
+  ]
+}
